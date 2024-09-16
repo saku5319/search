@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SakuSearcn</title>
+<style>
+/************************************
+            各種設定用
+*************************************/
+:root{
+  --input-height: 35px;/*検索窓の高さ*/
+  --input-border-radius: 10px;/*検索窓の丸さ*/
+  --cursor-border-radius: 50%;/*ページボタンの丸さ*/
+  --responsive-height: 180px;/*結果のブロック高さ*/
+}
+/*レスポンシブ用*/
+@media screen and (max-width: 1240px){
+}
+@media screen and (max-width: 1023px){
+}
+@media screen and (max-width: 834px){
+  :root{
+    --responsive-height: 240px;
+  }
+}
+@media screen and (max-width: 480px){
+}
+/************************************
+              検索窓
+*************************************/
+.gsc-input .gsc-input-box{/*検索文章入力窓*/
+  height: var(--input-height) !important;
+  width: 100% !important;
+  border-radius: var(--input-border-radius) !important;
+  box-shadow:0px 0px 0px 0px #c4c4c4 !important;
+}
+.gsc-input .gsc-input-box:hover{/*検索文章入力窓*/
+  box-shadow:0px 4px 6px 0px #c4c4c4 !important;
+}
+.gsc-search-button .gsc-search-button-v2{/*検索ボタン*/
+  height: var(--input-height) !important;
+  border-radius: var(--input-border-radius) !important;
+  box-shadow:0px 0px 0px 0px #c4c4c4 !important;
+}
+.gsc-search-button .gsc-search-button-v2:hover{/*検索ボタン*/
+  box-shadow:0px 4px 6px 0px #c4c4c4 !important;
+}
+/************************************
+              検索結果
+*************************************/
+.gsc-control-cse{/*検索結果全体背景*/
+  background-color: transparent !important;
+}
+.gsc-webResult .gsc-result{/*検索結果それぞれのブロック*/
+  margin: 15px !important;
+  height: var(--responsive-height) !important;
+  position: relative !important;
+  border-radius: 4px !important;
+  background: #ffffff !important;
+  box-shadow:  5px 5px 10px #878787,
+              -5px -5px 10px #ffffff !important;
+  transition-duration: 0.1s !important;
+  border: 1px #ffffff00 !important;
+}
+.gsc-result:hover{/*検索結果それぞれのブロック マウスホバー時*/
+  box-shadow: 0px 0px 0px 0px #c4c4c4 !important;
+  border: 1px #c4c4c4 !important;
+}
+.gs-promotion{/*カスタムプロモーション用*/
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  background-color: green !important;
+}
+.gsc-thumbnail-inside .gs-title {/*検索結果タイトル*/
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  font-weight: 600 !important;
+  }
+.gsc-thumbnail-inside .gs-title a{/*リンク全体化*/
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 100 !important;
+  text-align: left;
+  }/*検索結果タイトル*/
+.gsc-url-top{/*検索結果URL*/
+  position: absolute !important;
+  top: 45px !important;
+  left: 5px !important;
+}
+.gsc-table-result{/*画像とスニペット要素*/
+  position: absolute !important;
+  top: 70px !important;
+}
+
+/************************************
+            ページボタン
+*************************************/
+.gsc-cursor-box{
+  align-items: center !important;
+}
+.gsc-cursor .gsc-cursor-page{/*ページ選択ボタン*/
+  border: 1px !important;
+  border-radius: var(--cursor-border-radius) !important;
+  box-shadow:0px 0px 0px 0px #c4c4c4 !important;
+}
+.gsc-cursor .gsc-cursor-page:hover{
+  box-shadow:0px 4px 6px 0px #c4c4c4 !important;
+}
+.gsc-cursor-page .gsc-cursor-current-page{/*現在のページ*/
+
+}
+</style>
+</head>
+<body>
+<center><h1>SakuSearch</h1></center>
+<script async src="https://cse.google.com/cse.js?cx=c775924405bae44ed">
+</script>
+<div class="gcse-search"></div>
+</body>
